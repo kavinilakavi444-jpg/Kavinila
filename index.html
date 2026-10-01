@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kavinila M | BE CSE, SRM VEC</title>
+<meta name="description" content="Kavinila M, BE Computer Science and Engineering student at SRM VEC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF2F8;
+    --ink: #1B2559;
+    --ink-soft: #4A5480;
+    --marigold: #F2B138;
+    --white: #FFFFFF;
+    --line: #C9D2E6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #121836;
+      --ink: #EEF2F8;
+      --ink-soft: #A9B3D6;
+      --white: #1B2559;
+      --line: #2E3A78;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 0;
+  }
+  .brand { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; text-decoration: none; }
+  nav a { margin-left: 1.25rem; text-decoration: none; color: var(--ink-soft); font-weight: 600; }
+  nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--marigold); text-decoration-thickness: 3px; text-underline-offset: 6px; }
+
+  .hero { padding: 5rem 0 4rem; }
+  .hero h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: clamp(3.4rem, 15vw, 8.5rem);
+    line-height: .95;
+    letter-spacing: -0.03em;
+    animation: rise .8s ease-out both;
+  }
+  .hero h1 span {
+    display: inline-block;
+    background: var(--marigold);
+    color: #1B2559;
+    padding: 0 .12em;
+    margin-top: .08em;
+    border-radius: 6px;
+  }
+  .hero p { margin-top: 1.75rem; max-width: 34rem; font-size: 1.3rem; color: var(--ink-soft); }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+  section { padding: 3.5rem 0; border-top: 2px solid var(--line); }
+  h2 { font-family: "Bricolage Grotesque", sans-serif; font-size: 2rem; margin-bottom: 1rem; }
+  section p { max-width: 38rem; }
+
+  .edu {
+    background: var(--white);
+    border-left: 8px solid var(--marigold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+    max-width: 38rem;
+  }
+  .edu strong { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.3rem; display: block; }
+
+  .empty {
+    border: 2px dashed var(--ink-soft);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    max-width: 38rem;
+  }
+  .empty strong { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.25rem; display: block; margin-bottom: .25rem; }
+
+  footer { padding: 2.5rem 0 3rem; border-top: 2px solid var(--line); color: var(--ink-soft); font-size: 1rem; }
+
+  @media (prefers-reduced-motion: reduce) { .hero h1 { animation: none; } html { scroll-behavior: auto; } }
+  @media (max-width: 520px) { nav a { margin-left: .9rem; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#top">Kavinila M</a>
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <h1>Kavinila <span>M</span></h1>
+        <p>Computer Science and Engineering student at SRM VEC, learning to build things with code.</p>
+      </div>
+
+      <section id="about">
+        <h2>About me</h2>
+        <!-- EDIT: replace this paragraph with your own words -->
+        <p>I'm a BE CSE student at SRM VEC. I'm at the start of my journey in software and technology, and this site is where I'll share what I learn and build along the way.</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu">
+          <strong>BE, Computer Science and Engineering</strong>
+          SRM VEC
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="empty">
+          <!-- EDIT: when you finish a project, replace this box with its title, a short description and a link to its GitHub repo -->
+          <strong>My first project is on its way.</strong>
+          I'll add it here as soon as it's ready.
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year">2026</span> Kavinila M
+    </footer>
+  </div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
